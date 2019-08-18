@@ -14,6 +14,7 @@ class Notification extends Message
     private $sound;
     private $clickAction;
     private $tag;
+    private $androidChannelId;
 
     public function __construct($title = '', $body = '')
     {
@@ -90,9 +91,21 @@ class Notification extends Message
         return $this;
     }
 
+    /**
+     * android only, set the android_channel_id as string
+     * 
+     * @param string $id
+     * @return $this
+     */
+    public function setAndroidChannelId($id)
+    {
+        $this->androidChannelId = $id;
+        return $this;
+    }
+
     public function hasNotificationData()
     {
-        return $this->title || $this->body || $this->badge || $this->icon || $this->clickAction || $this->sound || $this->tag;
+        return $this->title || $this->body || $this->badge || $this->icon || $this->clickAction || $this->sound || $this->tag || $this->androidChannelId;
     }
 
     public function jsonSerialize()
@@ -121,6 +134,10 @@ class Notification extends Message
         }
         if ($this->tag) {
             $jsonData['tag'] = $this->tag;
+        }
+
+        if ($this->androidChannelId) {
+            $jsonData['android_channel_id'] = $this->androidChannelId;
         }
         return $jsonData;
     }

@@ -1,8 +1,5 @@
 # PHP Firebase Cloud Messaging
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/83a88985-9752-463b-ae62-7abb06aea791/big.png)](https://insight.sensiolabs.com/projects/83a88985-9752-463b-ae62-7abb06aea791)
-<a href='https://www.paypal.me/ymerajredjan' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
 PHP API for Firebase Cloud Messaging from Google.
 
 Currently this app server library only supports sending Messages/Notifications via HTTP.
@@ -12,14 +9,14 @@ See original Firebase docs: https://firebase.google.com/docs/
 #Setup
 Install via Composer:
 ```
-composer require redjanym/php-firebase-cloud-messaging
+composer require ruslanmedia/php-fcm
 ```
 
 Or add this to your composer.json and run "composer update":
 
 ```
 "require": {
-    "redjanym/php-firebase-cloud-messaging": "1.*"
+    "ruslanmedia/php-fcm": "1.*"
 }
 ```
 
